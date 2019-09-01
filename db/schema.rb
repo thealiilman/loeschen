@@ -10,16 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_01_024257) do
+ActiveRecord::Schema.define(version: 2019_09_01_024809) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
+    t.integer "publisher_id"
+    t.index ["publisher_id"], name: "index_authors_on_publisher_id"
   end
 
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.integer "author_id"
     t.index ["author_id"], name: "index_books_on_author_id"
+  end
+
+  create_table "publishers", force: :cascade do |t|
+    t.string "name"
   end
 
 end
