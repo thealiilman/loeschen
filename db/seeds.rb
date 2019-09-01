@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+author = Author.create(name: 'Oliver Guinness')
+['The Polesitter', 'Von Scheiße zu Gut'].each do |title|
+  author.books.create(title: title)
+end
+publisher = Publisher.create(name: 'Bloomsbury', authors: [author])
