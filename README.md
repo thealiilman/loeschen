@@ -1,24 +1,7 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# loeschen
+## How to run the app locally.
+- Make sure that you have `ruby 2.5.5`. If you don't, but you have [RVM](https://rvm.io/), simply run:  
+  `rvm install ruby-2.5.5`
+  
+- `bundle install`
+- `rails s` and you're good to go!
