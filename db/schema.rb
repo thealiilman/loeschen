@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_01_024809) do
+ActiveRecord::Schema.define(version: 2019_09_01_025841) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
     t.integer "publisher_id"
+    t.datetime "discarded_at"
+    t.index ["discarded_at"], name: "index_authors_on_discarded_at"
     t.index ["publisher_id"], name: "index_authors_on_publisher_id"
   end
 
